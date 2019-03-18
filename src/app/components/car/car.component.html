@@ -1,0 +1,25 @@
+<p>
+  Car works!
+</p>
+<p>Выведем данные по myCar для понимания что происходит</p>
+<ul>
+  <li>
+      Пробег: {{myCar.mileage}};
+  </li>
+  <li>
+    Топлива в баке: {{myCar.currentFuelVolume}};
+  </li>
+</ul>
+
+<p>Характеристики </p>
+<ul>
+  <li *ngFor="let spec of myCar.specifications">
+    {{ spec }}
+  </li>
+</ul>
+
+<button (click)="driveHandler(100)">Ехать</button>
+<br>
+<br>
+<button *ngIf="isVisible" (click)="refuel(20)">Заправится</button>
+
